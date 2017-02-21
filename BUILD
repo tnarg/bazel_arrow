@@ -4,12 +4,12 @@ package(
 
 alias(
     name='sources',
-    actual='@arrow_repo//:sources',
+    actual='//external:arrow_sources',
 )
 
 alias(
     name='headers',
-    actual='@arrow_repo//:headers',
+    actual='//external:arrow_headers',
 )
 
 cc_library(
