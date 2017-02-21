@@ -2,5 +2,85 @@ package(
     default_visibility=["//visibility:public"]
 )
 
-exports_files(glob(["**/*.h"]))
-exports_files(glob(["**/*.cc"]))
+filegroup(
+    name="sources",
+    srcs=[
+        "cpp/src/arrow/array.cc",
+        "cpp/src/arrow/buffer.cc",
+        "cpp/src/arrow/builder.cc",
+        "cpp/src/arrow/column.cc",
+        "cpp/src/arrow/compare.cc",
+        "cpp/src/arrow/memory_pool.cc",
+        "cpp/src/arrow/pretty_print.cc",
+        "cpp/src/arrow/schema.cc",
+        "cpp/src/arrow/status.cc",
+        "cpp/src/arrow/table.cc",
+        "cpp/src/arrow/type.cc",
+
+        "cpp/src/arrow/io/file.cc",
+        #"cpp/src/arrow/io/hdfs.cc",
+        #"cpp/src/arrow/io/hdfs-internal.cc",
+        "cpp/src/arrow/io/interfaces.cc",
+        "cpp/src/arrow/io/memory.cc",
+
+        #"cpp/src/arrow/ipc/adapter.cc",
+        #"cpp/src/arrow/ipc/file.cc",
+        #"cpp/src/arrow/ipc/json.cc",
+        #"cpp/src/arrow/ipc/json-internal.cc",
+        #"cpp/src/arrow/ipc/metadata.cc",
+        #"cpp/src/arrow/ipc/metadata-internal.cc",
+        #"cpp/src/arrow/ipc/stream.cc",
+
+        #"cpp/src/arrow/jemalloc/memory_pool.cc",
+
+        "cpp/src/arrow/util/bit-util.cc",
+        #"cpp/src/arrow/util/file-to-stream.cc",
+        #"cpp/src/arrow/util/stream-to-file.cc",
+    ],
+)
+
+filegroup(
+    name="headers",
+    srcs=[
+        "cpp/src/arrow/api.h",
+        "cpp/src/arrow/array.h",
+        "cpp/src/arrow/buffer.h",
+        "cpp/src/arrow/builder.h",
+        "cpp/src/arrow/column.h",
+        "cpp/src/arrow/compare.h",
+        "cpp/src/arrow/memory_pool.h",
+        "cpp/src/arrow/pretty_print.h",
+        "cpp/src/arrow/schema.h",
+        "cpp/src/arrow/status.h",
+        "cpp/src/arrow/table.h",
+        "cpp/src/arrow/type_fwd.h",
+        "cpp/src/arrow/type.h",
+        "cpp/src/arrow/type_traits.h",
+
+        "cpp/src/arrow/io/file.h",
+        #"cpp/src/arrow/io/hdfs.h",
+        #"cpp/src/arrow/io/hdfs-internal.h",
+        "cpp/src/arrow/io/interfaces.h",
+        "cpp/src/arrow/io/memory.h",
+        #"cpp/src/arrow/io/mman.h",
+        #"cpp/src/arrow/io/windows_compatibility.h",
+
+        #"cpp/src/arrow/ipc/adapter.h",
+        #"cpp/src/arrow/ipc/file.h",
+        #"cpp/src/arrow/ipc/json.h",
+        #"cpp/src/arrow/ipc/json-internal.h",
+        #"cpp/src/arrow/ipc/metadata.h",
+        #"cpp/src/arrow/ipc/metadata-internal.h",
+        #"cpp/src/arrow/ipc/stream.h",
+        #"cpp/src/arrow/ipc/util.h",
+
+        #"cpp/src/arrow/jemalloc/memory_pool.h",
+
+        "cpp/src/arrow/util/bit-util.h",
+        #"cpp/src/arrow/util/io-util.h",
+        "cpp/src/arrow/util/logging.h",
+        "cpp/src/arrow/util/macros.h",
+        #"cpp/src/arrow/util/random.h",
+        "cpp/src/arrow/util/visibility.h",
+    ],
+)
